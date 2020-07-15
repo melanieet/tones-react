@@ -1,24 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import Keys from "./Keys";
 
 function App() {
+  const notes = [
+    "C4",
+    "D4",
+    "E4",
+    "G4",
+    "A4",
+    "C5",
+    "D5",
+    "E5",
+    "G5",
+    "A5",
+    "C6",
+  ];
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Keyboard with React and Tone.js</h1>
+      <div>
+        <Keys notes={notes} />
+      </div>
+      <div>
+        <button>Pentatonic</button>
+        <button>Dorian</button>
+        <button>Blues</button>
+      </div>
     </div>
   );
 }
